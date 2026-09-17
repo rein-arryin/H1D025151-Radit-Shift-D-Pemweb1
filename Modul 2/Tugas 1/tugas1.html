@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas 1 - Modul 2</title>
+    </head>
+    <body>
+        <form>
+            <label for="input1">Input 1 (tidak dapat diganti)</label><br>
+            <input type="text" id="input1" name="input1" value="coba ganti" readonly><br><br>
+
+            <label for="input2">Input 2 (maksimal 5 karakter)</label><br>
+            <input type="text" id="input2" name="input2" maxlength="5"><br><br>
+
+            <label for="input3">Input 3 (tidak dapat di klik atau diisi)</label><br>
+            <input type="text" id="input3" name="input3" value="tidak dapat di apapakan" disabled><br><br>
+
+            <label for="input4">Input 4 (Hukumnya wajib diisi)</label><br>
+            <input type="text" id="input4" name="input4" required><br><br>
+
+            <label for="input5">Input 5 isi NIM (9 karakter huruf dan angka, gabisa simbol dan kapital)</label><br>
+            <input type="text" id="input5" name="input5" 
+                    pattern="[a-z0-9]{9}"
+                    maxlength="9"
+                    required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

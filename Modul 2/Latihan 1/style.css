@@ -1,0 +1,14 @@
+td {
+    vertical-align: middle;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 170px;
+}
+
+textarea {
+    width: 300px;
+    height: 160px;
+}
