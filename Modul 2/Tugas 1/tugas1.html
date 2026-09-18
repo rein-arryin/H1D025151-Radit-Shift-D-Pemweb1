@@ -5,25 +5,37 @@
     </head>
     <body>
         <form>
-            <label for="input1">Input 1 (tidak dapat diganti)</label><br>
-            <input type="text" id="input1" name="input1" value="coba ganti" readonly><br><br>
+            <table>
+                <tr>
+                    <td><label>Input 1 (Tidak dapat di ganti)</label></td>
+                    <td><input type="text" value="coba ganti" readonly></td>
+                </tr>
 
-            <label for="input2">Input 2 (maksimal 5 karakter)</label><br>
-            <input type="text" id="input2" name="input2" maxlength="5"><br><br>
+                <tr>
+                    <td><label>Input 2 (Maksimal 5 Karakter)</label></td>
+                    <td><input type="text" maxlength="5"></td>
+                </tr>
 
-            <label for="input3">Input 3 (tidak dapat di klik atau diisi)</label><br>
-            <input type="text" id="input3" name="input3" value="tidak dapat di apapakan" disabled><br><br>
+                <tr>
+                    <td><label>Input 3 (Tidak dapat di klik atau diisi)</label></td>
+                    <td><input type="text" value="coba klik" disabled></td>
+                </tr>
 
-            <label for="input4">Input 4 (Hukumnya wajib diisi)</label><br>
-            <input type="text" id="input4" name="input4" required><br><br>
+                <tr>
+                    <td><label>Input 4 (Hukumnya wajib diisi)</label></td>
+                    <td><input type="text" required></td>
+                </tr>
 
-            <label for="input5">Input 5 isi NIM (9 karakter huruf dan angka, gabisa simbol dan kapital)</label><br>
-            <input type="text" id="input5" name="input5" 
-                    pattern="[a-z0-9]{9}"
-                    maxlength="9"
-                    required><br><br>
+                <tr>
+                    <td><label>Input 5 NIM (Maksimal 9 Gaboleh Kapital dan simbol)</label></td>
+                    <td><input type="text" 
+                                pattern="[a-z0-9]{9}"
+                                maxlength="9">
+                    </td>
+                </tr>
 
-            <input type="submit" value="Submit">
+            </table>
+                <input type="submit" value="Test">
         </form>
     </body>
 </html>
