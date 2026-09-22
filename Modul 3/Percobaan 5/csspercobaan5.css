@@ -1,6 +1,7 @@
 body {background-color: blue;}
+
 h2 {
-    font-family: Comic Sans MS;
+    font-family: "Comic Sans MS";
     background-color: red;
     text-align: center;
 }
@@ -22,7 +23,7 @@ table {
 .kolom3 {width: 83%;}
 
 #txtNama, #txtKota {width: 186px;}
-#txtTgl, #txtBulan {width: 54;}
+#txtTgl, #txtBulan {width: 54px;}
 #txtTahun {width: 87px;}
 #txtAlamat {
     width: 346px;
