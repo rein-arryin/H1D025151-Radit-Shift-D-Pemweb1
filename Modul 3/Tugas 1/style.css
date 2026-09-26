@@ -1,27 +1,22 @@
-body {
-    background-color: #f0f4f8;
-    font-family: "Times New Roman";
-}
-
+body { background-color: #f0f4f8; }
 h2 {
     font-family: "Comic Sans MS";
     background-color: #e74c3c;
-    color: white;
     text-align: center;
+    color: white;
     padding: 12px;
     margin: 0;
 }
 
-form {
-    margin: 20px auto;
-}
+form { margin: 20px auto; }
 
 table {
     background: #ecf0f1;
     margin: 0 auto;
     padding: 0;
     width: 68%;
-    border-style: inset;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .kolom1 {
@@ -29,24 +24,17 @@ table {
     width: 15%;
 }
 
-.kolom2 {
-    width: 2%;
-}
+.kolom2 { width: 2%; }
+.kolom3 { width: 83%; }
 
-.kolom3 {
-    width: 83%;
-}
-
-#txtNama, 
-#txtKota {
+#txtNama, #txtKota {
     width: 186px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-#txtTgl, 
-#txtBulan {
+#txtTgl, #txtBulan {
     width: 54px;
     padding: 5px;
     border: 1px solid #ccc;
@@ -78,7 +66,6 @@ table {
     cursor: pointer;
     font-size: 15px;
     margin-right: 10px;
-    transition: background-color 0.3s;
 }
 
 .btnCancel {
@@ -89,5 +76,4 @@ table {
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
-    transition: background-color 0.3s;
 }
