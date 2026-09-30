@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tugas 1 - Modul 4</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Penggecekkan Nilai UTS PemWeb 1</h1>
+        <form>
+            <table>
+                <tr>
+                    <td><label id="lLabel">Masukan Nilai Ujian Anda</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="iNilai" required maxlength="3"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="cekNilai()">Cek Nilai</button></td>
+                </tr>
+                <tr>
+                    <td><h1 id="hasil"></h1></td>
+                </tr>
+            </table>
+        </form>
+        <script src="cek.js"></script>
+    </body>
+</html>

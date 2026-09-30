@@ -10,31 +10,36 @@
                 height: 120px;
             }
 
+            #fNama, #fEmail {
+                width: 200px;
+            }
+
         </style>
     </head>
     <body>
-        <form>
+        <form id="idForm">
             <table>
                 <tr>
                     <td><label>Nama</label></td>
                     <td>:</td>
-                    <td><input type="text"></td>
+                    <td><input name="fNama" type="text" id="fNama"></td>
                 </tr>
 
                 <tr>
                     <td><label>Email</label></td>
                     <td>:</td>
-                    <td><input type="text"></td>
+                    <td><input name="fEmail" type="text" id="fEmail"></td>
                 </tr>
 
                 <tr>
                     <td><label>Komentar</label></td>
                     <td>:</td>
-                    <td><textarea></textarea></td>
+                    <td><textarea name="fKomentar" id="fKomentar"></textarea></td>
                 </tr>
             </table>
                    <input type="submit" value="Simpan">
         </form>
+        <script src="form.js"></script>
     </body> 
 
 </html>
