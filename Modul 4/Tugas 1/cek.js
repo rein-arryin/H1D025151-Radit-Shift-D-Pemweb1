@@ -3,15 +3,15 @@ function cekNilai() {
     let hasil = document.getElementById("hasil");
 
     if (nilai > 100) {
-        hasil.innerHTML = "Nilai tidak Valid"
+        hasil.innerHTML = "Nilai anda tidak Valid"
     } else if (nilai >= 81 && nilai <= 100) {
-        hasil.innerHTML = "Nilai Anda A";
+        hasil.innerHTML = "Nilai anda A";
     } else if (nilai <= 80 && nilai >= 61) {
-        hasil.innerHTML = "Nilai Anda B";
+        hasil.innerHTML = "Nilai anda B";
     } else if (nilai <= 60 && nilai >= 41) {
-        hasil.innerHTML = "Nilai Anda C";
+        hasil.innerHTML = "Nilai anda C";
     } else if (nilai <= 40 && nilai >= 21) {
-        hasil.innerHTML = "Nilai Anda D";
+        hasil.innerHTML = "Nilai anda D";
     } else {
         hasil.innerHTML = "NILAI ANDA E";
     }
