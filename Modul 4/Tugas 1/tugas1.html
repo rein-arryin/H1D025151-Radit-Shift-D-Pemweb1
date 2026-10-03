@@ -3,26 +3,94 @@
     <head>
         <meta charset="UTF-8">
         <title>Tugas 1 - Modul 4</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            body {
+                background-color: #F0F4FF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+
+            .form {
+                border: solid rgb(99, 99, 99) 1px;
+                border-radius: 10px;
+                background-color: #FFFFFF;
+                padding: 30px;
+                text-align: center;
+                width: 350px;
+            }
+
+            h2 {
+                background-color: #2ECC71;
+                color: #FFFFFF;
+                padding: 8px;
+                border-radius: 8px;
+            }
+
+            #iNilai {
+                text-align: center;
+                font-size: 16px;
+                width: 80%;
+                height: 30px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                background-color: #FFFFFF;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                padding: 0;
+            }
+
+            .hasil {
+                font: 18px bold;
+                margin-bottom: 15px;
+            }
+
+            button {
+                background-color: #007bff;
+                color: #FFFFFF;
+                padding: 12px 24px;
+                font-size: 18px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #0050a5;
+            }
+        </style>
     </head>
     <body>
-        <h1>Penggecekkan Nilai UTS PemWeb 1</h1>
-        <form>
-            <table>
-                <tr>
-                    <td><label id="lLabel">Masukan Nilai Ujian Anda</label></td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="iNilai" required maxlength="3"></td>
-                </tr>
-                <tr>
-                    <td><button type="button" onclick="cekNilai()">Cek Nilai</button></td>
-                </tr>
-                <tr>
-                    <td><h1 id="hasil">Nilai Anda</h1></td>
-                </tr>
-            </table>
-        </form>
-        <script src="cek.js"></script>
+        <div class="form">
+            <h2>Penggecekkan Nilai UTS PemWeb 1</h2>
+            <br>
+            <input type="number" id="iNilai" placeholder="Masukan Nilai (0-100)" required>
+            <br>
+            <div class="hasil" id="hasil"></div>
+            <button onclick="cekNilai()">Hitung</button>
+        </div>
+        <script>
+            function cekNilai() {
+                let nilai = Number(document.getElementById("iNilai").value);
+                let hasil = document.getElementById("hasil");
+
+                if (nilai > 100) {
+                    hasil.innerHTML = "Nilai anda ketinggian"
+                } else if (nilai >= 81 && nilai <= 100) {
+                    hasil.innerHTML = "Nilai anda A";
+                } else if (nilai <= 80 && nilai >= 61) {
+                    hasil.innerHTML = "Nilai anda B";
+                } else if (nilai <= 60 && nilai >= 41) {
+                    hasil.innerHTML = "Nilai anda C";
+                } else if (nilai <= 40 && nilai >= 21) {
+                    hasil.innerHTML = "Nilai anda D";
+                } else if (nilai <= 20 && nilai >= 0) {
+                    hasil.innerHTML = "Nilai anda E"
+                } else {
+                    hasil.innerHTML = "Keren";
+                }
+            }
+        </script>
     </body>
 </html>
