@@ -84,7 +84,7 @@
         <script>
             let input1 = document.getElementById('input1');
             let input2 = document.getElementById('input2');
-            let hasil = document.getElementById('hasil')
+            let hasil = document.getElementById('hasil');
 
             function cekNilai(operasi){
 
@@ -98,20 +98,15 @@
 
                 if(operasi == "Penjumlahan"){
                     hasil.innerHTML = a + b;
-                }
-                else if(operasi == "Pengurangan"){
+                } else if(operasi == "Pengurangan"){
                     hasil.innerHTML = a - b;
-                }
-                else if(operasi == "Perkalian"){
+                } else if(operasi == "Perkalian"){
                     hasil.innerHTML = a * b;
-                }
-                else if(operasi == "Pembagian"){
+                } else if(operasi == "Pembagian"){
                     if (b == 0){
                         hasil.innerHTML = "Tidak bisa dibagi dengan 0";
-                    }
-
-                    else {
-                        hasil.innerHTML = (a / b);
+                    } else {
+                        hasil.innerHTML = a / b;
                     }
                 }
             }
@@ -119,7 +114,7 @@
             function reset(){
                 input1.value = "";
                 input2.value = "";
-                hasil.innerHTML = "Hasil akan tampil disini";
+                hasil.innerHTML = "Hasil akan tampil disini.";
             }
         </script>
     </body>
