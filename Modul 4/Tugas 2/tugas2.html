@@ -3,33 +3,124 @@
     <head>
         <meta charset="UTF-8">
         <title>Tugas 2 - Modul 4</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            body {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background: #e3f9ff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .kalkulator {
+                background: #fff;
+                padding: 30px;
+                margin-top: 50px;
+                border: 1px solid black;
+                border-radius: 8px;
+                box-shadow: 5px 10px;
+            }
+
+            h1 { margin-top: -20px; }            
+            p { margin-top: -15px; }
+
+            input {
+                display: block;
+                width: 100%;
+                height: 30px;
+                margin: 10px auto;
+                box-sizing: border-box;
+            }
+
+            .operasi {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .operasi button{
+                background: none;
+                width: 60px;
+                height: 45px;
+                font-size: 30px;
+                border: 1px solid black;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            
+            #reset {
+                background: rgb(5, 92, 255);
+                color: #fff;
+                width: 30%;
+                height: 30px;
+                display: block;
+                margin: 10px auto 0 auto;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            #hasil {
+                margin-top: 10px;
+                border: 1px solid black;
+                height: 20px;
+            }
+        </style>
     </head>
     <body>
-        <div id="kalkulator">
-            <input type="number" id="display">
-            <div id="tombol">
-                <button onclick="hapusSemua()">AC</button>
-                <button onclick="hapusSatu()">DE</button>
-                <button onclick="appendToDisplay('%')">%</button>
-                <button onclick="appendToDisplay('/')">/</button>
-                <button onclick="appendToDisplay('7')">7</button>
-                <button onclick="appendToDisplay('8')">8</button>
-                <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="appendToDisplay('*')">*</button>
-                <button onclick="appendToDisplay('4')">4</button>
-                <button onclick="appendToDisplay('5')">5</button>
-                <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('-')">-</button>
-                <button onclick="appendToDisplay('1')">1</button>
-                <button onclick="appendToDisplay('2')">2</button>
-                <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('+')">+</button>
-                <button onclick="appendToDisplay('0')">0</button>
-                <button onclick="appendToDisplay('.')">.</button>
-                <button id="samaDengan" onclick="hitung()">=</button>
+        <div class="kalkulator">
+            <h1>Kalkulator Simpel</h1> 
+            <p>Masukan Angka 1 dan 2</p>
+            <input type="number" id="input1" placeholder="Masukan Angka ke-1">
+            <input type="number" id="input2" placeholder="Masukan Angka ke-2">
+            <div class="operasi">
+                <button id="Penjumlahan" onclick="cekNilai('Penjumlahan')">+</button>
+                <button id="Pengurangan" onclick="cekNilai('Pengurangan')">-</button>
+                <button id="Perkalian" onclick="cekNilai('Perkalian')">×</button>
+                <button id="Pembagian" onclick="cekNilai('Pembagian')">÷</button>
             </div>
+            <div id="hasil">Hasil akan tampil disini.</div>
+            <button onclick="reset()" id="reset">Reset</button>
         </div>
-        <script src="index.js"></script> 
+        <script>
+            let input1 = document.getElementById('input1');
+            let input2 = document.getElementById('input2');
+            let hasil = document.getElementById('hasil')
+
+            function cekNilai(operasi){
+
+                if(input1.value == "" || input2.value == ""){
+                    hasil.innerHTML = "Isi Input terlebih dahulu";
+                    return;
+                }
+
+                let a = Number(input1.value);
+                let b = Number(input2.value);
+
+                if(operasi == "Penjumlahan"){
+                    hasil.innerHTML = a + b;
+                }
+                else if(operasi == "Pengurangan"){
+                    hasil.innerHTML = a - b;
+                }
+                else if(operasi == "Perkalian"){
+                    hasil.innerHTML = a * b;
+                }
+                else if(operasi == "Pembagian"){
+                    if (b == 0){
+                        hasil.innerHTML = "Tidak bisa dibagi dengan 0";
+                    }
+
+                    else {
+                        hasil.innerHTML = (a / b);
+                    }
+                }
+            }
+
+            function reset(){
+                input1.value = "";
+                input2.value = "";
+                hasil.innerHTML = "Hasil akan tampil disini";
+            }
+        </script>
     </body>
 </html>
